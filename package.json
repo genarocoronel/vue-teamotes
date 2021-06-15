@@ -5,13 +5,13 @@
   "main": "electron/index.js",
   "scripts": {
     "electron": "electron dist",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "npm run build:vue && npm run build:electron",
+    "dev": "node api.js && cross-env NODE_ENV=development webpack-dev-server",
+    "build": "node api.js && npm run build:vue && npm run build:electron",
     "build:vue": "cross-env NODE_ENV=production webpack --production",
     "build:electron": "cross-env NODE_ENV=production node ./prebuild && electron-builder"
   },
   "keywords": [],
-  "author": "André Weller <info@lost.design> (https://lost.design/)",
+  "author": "Andr\u00e9 Weller <info@lost.design> (https://lost.design/)",
   "license": "MIT",
   "dependencies": {
     "mime-types": "^2.1.27",
@@ -64,7 +64,7 @@
       }
     },
     "linux": {
-      "maintainer": "André Weller <info@lost.design> (https://lost.design/)",
+      "maintainer": "Andr\u00e9 Weller <info@lost.design> (https://lost.design/)",
       "target": [
         "deb"
       ],
